@@ -1,0 +1,127 @@
+<div class="page-body">
+  <div class="hero-bg resume-img">
+    <div class="hero-content">
+      <div class="text-white montserrat font-size-huge font-weight-semi-bold text-center line-height-small">
+        EXHAUSTIVE. EXTENSIVE. EXPANDED.
+      </div>
+      <div class="text-white garamond font-size-medium font-weight-regular text-center font-italic margin-bottom-medium">
+        Learn a bit more about my professional background
+      </div>
+      <div class="text-center margin-top-immense">
+        <div class="white-button font-weight-light pointer" ng-click="downloadResume()" target="_blank" ng-href="">
+          DOWNLOAD RESUME
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div id="description-holder">
+      <div class="garamond font-size-largest text-center margin-bottom-large text-gunpowder-gray">
+        Experience goes a long way
+      </div>
+      <div class="montserrat font-size-medium font-weight-light text-center line-height-medium text-gunpowder-gray">
+        With over six years in the technology industry and more than three as a Full Stack software engineer, I've cultivated a strong background in program development, providing results on all the projects I have worked on.
+      </div>
+    </div>
+  </div>
+  <div class="bg-white">
+    <div class="container">
+      <div class="garamond font-size-largest font-weight-medium text-gunpowder-gray">
+        Relevant Experience
+      </div>
+      <div class="montserrat text-gunpowder-gray" ng-repeat="item in experience">
+        <div class="margin-top-medium font-size-medium font-weight-light">
+          <div class="row justify-content-between">
+            <div class="col-6">
+              {{item.company}}
+            </div>
+            <div class="col-6 text-right">
+              <div class="font-size-small">
+                {{item.time}}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="margin-top-small font-size-tiny font-weight-light font-italic">
+          {{item.tag}}
+        </div>
+        <div class="font-size-small">
+          <div class="margin-top-medium font-weight-light">
+            {{item.title}}
+          </div>
+          <ul class="font-weight-light margin-top-medium">
+            <li class="margin-top-small">{{item.bulletOne}}</li>
+            <li class="margin-top-small">{{item.bulletTwo}}</li>
+            <li class="margin-top-small">{{item.bulletThree}}</li>
+          </ul>
+        </div>
+      </div>
+      <div class="garamond font-size-largest font-weight-medium text-gunpowder-gray margin-top-immense">
+        Education
+      </div>
+      <div class="montserrat text-gunpowder-gray" ng-repeat="item in education">
+        <div class="margin-top-medium font-size-medium font-weight-light">
+          <div class="row justify-content-between">
+            <div class="col-6">
+              {{item.school}}
+            </div>
+            <div class="col-6 text-right">
+              <div class="font-size-small">
+                {{item.time}}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="font-size-small">
+          <div class="margin-top-tiny font-weight-light">
+            {{item.degree}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="contact-me-bg contact-me-img">
+    <div class="contact-me-content">
+      <div class="text-white garamond font-size-large font-weight-regular text-center font-italic margin-bottom-large">
+        Do you have a website idea and need help from an expert?
+      </div>
+      <div class="container">
+        <div class="text-white montserrat font-size-huge font-weight-semi-bold text-center line-height-small margin-bottom-medium">
+          HIRE A FULL-STACK ENGINEER TODAY
+        </div>
+      </div>
+      <div class="text-center margin-top-immense">
+        <div class="white-button font-weight-light pointer" ui-sref="contact">
+          CONTACT ME
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="footer-body container">
+      <div class="hero-content">
+        <div class="text-white garamond font-size-large font-weight-regular text-center line-height-small padding-immense margin-top-immense margin-right-immense margin-left-immense">
+          Create beautiful, responsive, and interactive websites exactly as you want them
+        </div>
+        <div class="text-center">
+          <a class="text-white" ui-sref="contact">
+            <i class="padding-medium far fa-envelope fa-lg"></i>
+          </a>
+          <a class="text-white" href="https://www.linkedin.com/in/dela1000/" target="_blank">
+            <i class="padding-medium fab fa-linkedin-in fa-lg"></i>
+          </a>
+          <a class="text-white" href="https://github.com/dela1000" target="_blank">
+            <i class="padding-medium fab fa-github fa-lg"></i>
+          </a>
+          <a class="text-white" href="http://instagram.com/dela1000" target="_blank">
+            <i class="padding-medium fab fa-instagram fa-lg"></i>
+          </a>
+        </div>
+        <div class="text-black font-size-tiny font-weight-regular text-center padding-immense margin-bottom-immense margin-right-immense margin-left-immense">
+          &copy; {{year}} Daniel De La Rosa. All rights reserved.
+          <br> Developed with Angular.js and Node.js
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,1 @@
+let resume = angular.module('resume', []);

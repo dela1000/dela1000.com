@@ -1,0 +1,72 @@
+/*Fonts*/
+.garamond {
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.montserrat {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*Font sizes*/
+.font-size-minuscule {
+    font-size: 12px;
+}
+
+.font-size-tiny {
+    font-size: 14px;
+}
+
+.font-size-small {
+    font-size: 16px;
+}
+
+.font-size-medium {
+    font-size: 24px;
+}
+
+.font-size-large {
+    font-size: 26px;
+}
+
+.font-size-moderate {
+    font-size: 32px;
+}
+
+.font-size-largest {
+    font-size: 42px;
+}
+
+.font-size-huge {
+    font-size: 72px;
+}
+
+/*Font weights*/
+.font-weight-light {
+    font-weight: 300;
+}
+
+.font-weight-regular {
+    font-weight: 400;
+}
+
+.font-weight-semi-bold {
+    font-weight: 600;
+}
+
+/*Line Height*/
+.line-height-small {
+    line-height: 1.1;
+}
+
+.line-height-medium {
+    line-height: 1.7;
+}
+
+/*Text Colors*/
+.text-gunpowder-gray {
+    color: #1a1a1a;
+}
+
+.text-black {
+    color: black;
+}

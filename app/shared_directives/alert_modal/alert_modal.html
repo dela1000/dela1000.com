@@ -1,0 +1,10 @@
+<div class="alert-modal fade-animation" ng-show="alert.visible">
+    <div class="alert-modal-content">
+        <div class="margin-top-large margin-bottom-small">{{alert.message}}</div>
+    </div>
+    <div class="text-center">
+      <button class="send-button margin-bottom-large" ng-click="hideModal()">OK</button>
+    </div>
+</div>
+
+<div class="alert-background fade-animation" ng-show="alert.visible"></div>
