@@ -12,7 +12,7 @@ let sharedDirectives = angular.module('sharedDirectives', [])
 
 let rootCtrl = angular.module('rootCtrl', []);
 
-rootCtrl.controller("rootCtrl", ($scope, $rootScope, $state, trafficCop) => {
+rootCtrl.controller("rootCtrl", ($scope, $rootScope, $state, $window, trafficCop) => {
     // Navbar selectors
     $scope.navbarOptions = [
         { value: 'home' },
@@ -50,6 +50,10 @@ rootCtrl.controller("rootCtrl", ($scope, $rootScope, $state, trafficCop) => {
             };
         }
     ), true;
+
+    $scope.goToTop = () => {
+        $window.scrollTo(0, 0);
+    }
 })
 
 App.run(['$transitions', function($transitions) {
@@ -98,7 +102,6 @@ App.config(setupConfig = ($locationProvider, $httpProvider) => {
     $httpProvider.interceptors.push(interceptHttp);
 })
 let contact = angular.module('contact', []);
-let resume = angular.module('resume', []);
 App.config(function ($stateProvider, $urlRouterProvider) {
     
     $urlRouterProvider.when('', '/')
@@ -128,6 +131,7 @@ App.config(function ($stateProvider, $urlRouterProvider) {
         })
 
 })
+let resume = angular.module('resume', []);
 var App = angular.module('App');
 
 App.factory('alert', () => {
@@ -150,9 +154,7 @@ App.factory('appConstants', ($window) => {
 
     if(_.includes($window.document.URL, 'localhost')) {
         console.log("constants.js LOCALHOST ENV")
-        urlBase = "http://localhost:4040";
-    } else if(_.includes($window.document.URL, 'amazonaws')){
-        urlBase = "AMAZON_ADDRESS_GOES_HERE"
+        urlBase = "http://localhost:8080";
     } else if(_.includes($window.document.URL, 'dela1000')){
         urlBase = "http://dela1000.com"
     }
@@ -322,12 +324,8 @@ resume.controller("resumeCtrl", function($scope, $window, $http, appConstants) {
         }
     ];
 
-    $scope.downloadResume = () => {
-        $http.get(appConstants.urlBase + '/resume')
-            .then((response) => {
-                $window.open(response.data, '_blank')
-            })
-    }
+    $scope.resumeLink = appConstants.urlBase + "/public/DanielDeLaRosaResume2018.pdf";
+
 })
 sharedDirectives.directive('alertModal', (appConstants, alert) => {
     return {

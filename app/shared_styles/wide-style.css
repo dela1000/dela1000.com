@@ -117,7 +117,7 @@ input {
     text-transform: uppercase;
     line-height: 60px;
     letter-spacing: 1px;
-    font-weight: 300;
+    font-weight: 400;
     font-style: normal;
     font-size: 16px;
     color: white !important;
@@ -125,7 +125,6 @@ input {
     transition: 0.2s color linear;
     cursor: pointer;
     text-decoration: none !important;
-    text-shadow: 1px 1px black;
 }
 
 .header-button-text:hover {
@@ -133,6 +132,21 @@ input {
 }
 
 /*Home*/
+
+#container {
+  position: relative;
+}
+#navi,
+#infoi {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#infoi {
+  z-index: 10;
+}
 
 .hero-bg {
     height: 100%;
@@ -142,22 +156,42 @@ input {
 }
 
 .home-img {
-    background: url(https://placekitten.com/1910/800) no-repeat center center;
+    background: url(../app/assets/bg-photos/fesbw.png) no-repeat center center;
+    background-size: cover;
+}
+
+.tech-img {
+    background: url(../app/assets/bg-photos/praguebw.png) no-repeat center center;
     background-size: cover;
 }
 
 .about-img {
-    background: url(https://placekitten.com/1910/820) no-repeat center center;
+    background: url(../app/assets/bg-photos/portobw.png) no-repeat center center;
     background-size: cover;
 }
 
 .resume-img {
-    background: url(https://placekitten.com/1910/830) no-repeat center center;
+    background: url(../app/assets/bg-photos/sintrabw.png) no-repeat center center;
     background-size: cover;
 }
 
 .contact-img {
-    background: url(https://placekitten.com/1910/840) no-repeat center center;
+    background: url(../app/assets/bg-photos/sofiabw.png) no-repeat center center;
+    background-size: cover;
+}
+
+.contact-me-home-img {
+    background: url(../app/assets/bg-photos/halongbaybw.png) no-repeat center center;
+    background-size: cover;
+}
+
+.contact-me-resume-img {
+    background: url(../app/assets/bg-photos/lisbonbw.png) no-repeat center center;
+    background-size: cover;
+}
+
+.contact-me-tech-img {
+    background: url(../app/assets/bg-photos/karlstejnbw.png) no-repeat center center;
     background-size: cover;
 }
 
@@ -199,10 +233,6 @@ input {
     clear: both;
 }
 
-.contact-me-img {
-    background: url(https://placekitten.com/1800/400) no-repeat center center;
-    background-size: cover;
-}
 
 .contact-me-content {
     position: relative;
@@ -291,13 +321,17 @@ input {
     height: 100%;
 }
 
+.go-to-top {
+    display: none;
+}
+
 /* Relative CSS */
 
 @media only screen and (max-width: 990px) {
     /* navbar */
     /*Breakpoint for hamburger menu*/
     #nav-form-inline {
-        background-color: white;
+        background-color: #edeeef;
         padding-left: 10px;
     }
 
@@ -306,7 +340,9 @@ input {
     }
 
     .header-button-text {
-        color: #1a1a1a;
+        font-weight: 400;
+        color: #26262a !important;
+        text-shadow: 0px 0px transparent;
     }
 
     .contact-me-bg {
@@ -323,4 +359,9 @@ input {
     .font-size-huge {
         font-size: 40px;
     }
+
+    .go-to-top {
+        display: block;
+    }
+
 }

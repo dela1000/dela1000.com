@@ -6,9 +6,7 @@ App.factory('appConstants', ($window) => {
 
     if(_.includes($window.document.URL, 'localhost')) {
         console.log("constants.js LOCALHOST ENV")
-        urlBase = "http://localhost:4040";
-    } else if(_.includes($window.document.URL, 'amazonaws')){
-        urlBase = "AMAZON_ADDRESS_GOES_HERE"
+        urlBase = "http://localhost:8080";
     } else if(_.includes($window.document.URL, 'dela1000')){
         urlBase = "http://dela1000.com"
     }

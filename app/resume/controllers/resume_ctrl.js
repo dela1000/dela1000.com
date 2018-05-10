@@ -41,10 +41,6 @@ resume.controller("resumeCtrl", function($scope, $window, $http, appConstants) {
         }
     ];
 
-    $scope.downloadResume = () => {
-        $http.get(appConstants.urlBase + '/resume')
-            .then((response) => {
-                $window.open(response.data, '_blank')
-            })
-    }
+    $scope.resumeLink = appConstants.urlBase + "/public/DanielDeLaRosaResume2018.pdf";
+
 })

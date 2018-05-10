@@ -14,4 +14,4 @@ app.use(bodyParser.json());
 app.use('/', routes);
 app.use(express.static(path.join(__dirname)));
 
-app.listen(4040, () => console.log('Listening on port 4040'));
+app.listen(8080, () => console.log('Listening on port 8080'));

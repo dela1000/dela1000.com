@@ -12,7 +12,7 @@ let sharedDirectives = angular.module('sharedDirectives', [])
 
 let rootCtrl = angular.module('rootCtrl', []);
 
-rootCtrl.controller("rootCtrl", ($scope, $rootScope, $state, trafficCop) => {
+rootCtrl.controller("rootCtrl", ($scope, $rootScope, $state, $window, trafficCop) => {
     // Navbar selectors
     $scope.navbarOptions = [
         { value: 'home' },
@@ -50,6 +50,10 @@ rootCtrl.controller("rootCtrl", ($scope, $rootScope, $state, trafficCop) => {
             };
         }
     ), true;
+
+    $scope.goToTop = () => {
+        $window.scrollTo(0, 0);
+    }
 })
 
 App.run(['$transitions', function($transitions) {

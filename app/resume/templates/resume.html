@@ -8,9 +8,11 @@
         Learn a bit more about my professional background
       </div>
       <div class="text-center margin-top-immense">
-        <div class="white-button font-weight-light pointer" ng-click="downloadResume()" target="_blank" ng-href="">
-          DOWNLOAD RESUME
-        </div>
+        <a  target="_blank" ng-href="{{resumeLink}}">
+          <div class="white-button font-weight-light pointer">
+            DOWNLOAD RESUME
+          </div>
+        </a>
       </div>
     </div>
   </div>
@@ -20,7 +22,7 @@
         Experience goes a long way
       </div>
       <div class="montserrat font-size-medium font-weight-light text-center line-height-medium text-gunpowder-gray">
-        With over six years in the technology industry and more than three as a Full Stack software engineer, I've cultivated a strong background in program development, providing results on all the projects I have worked on.
+        With over six years in the technology industry and more than three as a Full Stack software engineer, I have cultivated a strong background in program development, providing results on all the projects I have worked on.
       </div>
     </div>
   </div>
@@ -80,7 +82,7 @@
       </div>
     </div>
   </div>
-  <div class="contact-me-bg contact-me-img">
+  <div class="contact-me-bg contact-me-resume-img">
     <div class="contact-me-content">
       <div class="text-white garamond font-size-large font-weight-regular text-center font-italic margin-bottom-large">
         Do you have a website idea and need help from an expert?
@@ -117,7 +119,10 @@
             <i class="padding-medium fab fa-instagram fa-lg"></i>
           </a>
         </div>
-        <div class="text-black font-size-tiny font-weight-regular text-center padding-immense margin-bottom-immense margin-right-immense margin-left-immense">
+        <div class="text-white font-size-tiny font-weight-light text-center padding-medium margin-bottom-medium margin-right-immense margin-left-immense go-to-top">
+          <a class="pointer" ng-click="goToTop()">Go to top</a>
+        </div>
+        <div class="text-black font-size-tiny font-weight-regular text-center padding-huge margin-bottom-immense margin-right-immense margin-left-immense">
           &copy; {{year}} Daniel De La Rosa. All rights reserved.
           <br> Developed with Angular.js and Node.js
         </div>
