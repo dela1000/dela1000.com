@@ -43,7 +43,7 @@ rootCtrl.controller("rootCtrl", ($scope, $rootScope, $state, $window, trafficCop
             //     "}"
             // )
             //Set callBeingMade rootScope to display or hide the main http cover for the whole page in index.html
-            if (count > 0) {
+            if (trafficCop.pending.post > 0) {
                 $rootScope.fadeAnimation = true;
             } else {
                 $rootScope.fadeAnimation = false;
@@ -102,6 +102,7 @@ App.config(setupConfig = ($locationProvider, $httpProvider) => {
     $httpProvider.interceptors.push(interceptHttp);
 })
 let contact = angular.module('contact', []);
+let resume = angular.module('resume', []);
 App.config(function ($stateProvider, $urlRouterProvider) {
     
     $urlRouterProvider.when('', '/')
@@ -131,7 +132,6 @@ App.config(function ($stateProvider, $urlRouterProvider) {
         })
 
 })
-let resume = angular.module('resume', []);
 var App = angular.module('App');
 
 App.factory('alert', () => {

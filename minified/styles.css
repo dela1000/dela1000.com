@@ -886,6 +886,46 @@ input {
         text-shadow: 0px 0px transparent;
     }
 
+    .home-img {
+        background: url(../app/assets/bg-photos/mfesbw.jpg) no-repeat center center;
+        background-size: cover;
+    }
+
+    .tech-img {
+        background: url(../app/assets/bg-photos/mpraguebw.jpg) no-repeat center center;
+        background-size: cover;
+    }
+
+    .about-img {
+        background: url(../app/assets/bg-photos/mbarcelonabw.jpg) no-repeat center center;
+        background-size: cover;
+    }
+
+    .resume-img {
+        background: url(../app/assets/bg-photos/msintrabw.jpg) no-repeat center center;
+        background-size: cover;
+    }
+
+    .contact-img {
+        background: url(../app/assets/bg-photos/msofiabw.jpg) no-repeat center center;
+        background-size: cover;
+    }
+
+    .contact-me-home-img {
+        background: url(../app/assets/bg-photos/mhalongbaybw.jpg) no-repeat center center;
+        background-size: cover;
+    }
+
+    .contact-me-resume-img {
+        background: url(../app/assets/bg-photos/mlisbonbw.jpg) no-repeat center center;
+        background-size: cover;
+    }
+
+    .contact-me-tech-img {
+        background: url(../app/assets/bg-photos/mkarlstejnbw.jpg) no-repeat center center;
+        background-size: cover;
+    }
+
     .contact-me-bg {
         max-height: 800px;
     }
@@ -920,6 +960,7 @@ input {
     z-index: 1052;
     margin-left: -250px;
     margin-top: -100px;
+    box-shadow: 5px 5px 20px #383838;
 }
 
 .alert-modal-content {

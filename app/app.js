@@ -43,7 +43,7 @@ rootCtrl.controller("rootCtrl", ($scope, $rootScope, $state, $window, trafficCop
             //     "}"
             // )
             //Set callBeingMade rootScope to display or hide the main http cover for the whole page in index.html
-            if (count > 0) {
+            if (trafficCop.pending.post > 0) {
                 $rootScope.fadeAnimation = true;
             } else {
                 $rootScope.fadeAnimation = false;
