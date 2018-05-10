@@ -156,42 +156,42 @@ input {
 }
 
 .home-img {
-    background: url(../app/assets/bg-photos/fesbw.png) no-repeat center center;
+    background: url(../app/assets/bg-photos/fesbw.jpg) no-repeat center center;
     background-size: cover;
 }
 
 .tech-img {
-    background: url(../app/assets/bg-photos/praguebw.png) no-repeat center center;
+    background: url(../app/assets/bg-photos/praguebw.jpg) no-repeat center center;
     background-size: cover;
 }
 
 .about-img {
-    background: url(../app/assets/bg-photos/portobw.png) no-repeat center center;
+    background: url(../app/assets/bg-photos/barcelonabw.jpg) no-repeat center center;
     background-size: cover;
 }
 
 .resume-img {
-    background: url(../app/assets/bg-photos/sintrabw.png) no-repeat center center;
+    background: url(../app/assets/bg-photos/sintrabw.jpg) no-repeat center center;
     background-size: cover;
 }
 
 .contact-img {
-    background: url(../app/assets/bg-photos/sofiabw.png) no-repeat center center;
+    background: url(../app/assets/bg-photos/sofiabw.jpg) no-repeat center center;
     background-size: cover;
 }
 
 .contact-me-home-img {
-    background: url(../app/assets/bg-photos/halongbaybw.png) no-repeat center center;
+    background: url(../app/assets/bg-photos/halongbaybw.jpg) no-repeat center center;
     background-size: cover;
 }
 
 .contact-me-resume-img {
-    background: url(../app/assets/bg-photos/lisbonbw.png) no-repeat center center;
+    background: url(../app/assets/bg-photos/lisbonbw.jpg) no-repeat center center;
     background-size: cover;
 }
 
 .contact-me-tech-img {
-    background: url(../app/assets/bg-photos/karlstejnbw.png) no-repeat center center;
+    background: url(../app/assets/bg-photos/karlstejnbw.jpg) no-repeat center center;
     background-size: cover;
 }
 
@@ -210,6 +210,10 @@ input {
     -ms-box-pack: center;
     box-pack: center;
     height: 100%;
+}
+
+.background-darkness {
+    background-color:rgba(0, 0, 0, 0.3);
 }
 
 #description-holder {
