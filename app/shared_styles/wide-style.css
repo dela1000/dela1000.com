@@ -156,42 +156,42 @@ input {
 }
 
 .home-img {
-    background: url(../app/assets/bg-photos/fesbw.jpg) no-repeat center center;
+    background: url(../app/assets/bg-photos/desktop/merzougabw.jpg) no-repeat center center;
     background-size: cover;
 }
 
 .tech-img {
-    background: url(../app/assets/bg-photos/praguebw.jpg) no-repeat center center;
+    background: url(../app/assets/bg-photos/desktop/praguebw.jpg) no-repeat center center;
     background-size: cover;
 }
 
 .about-img {
-    background: url(../app/assets/bg-photos/barcelonabw.jpg) no-repeat center center;
+    background: url(../app/assets/bg-photos/desktop/barcelonabw.jpg) no-repeat center center;
     background-size: cover;
 }
 
 .resume-img {
-    background: url(../app/assets/bg-photos/sintrabw.jpg) no-repeat center center;
+    background: url(../app/assets/bg-photos/desktop/sofiabw.jpg) no-repeat center center;
     background-size: cover;
 }
 
 .contact-img {
-    background: url(../app/assets/bg-photos/sofiabw.jpg) no-repeat center center;
+    background: url(../app/assets/bg-photos/desktop/fesbw.jpg) no-repeat center center;
     background-size: cover;
 }
 
 .contact-me-home-img {
-    background: url(../app/assets/bg-photos/halongbaybw.jpg) no-repeat center center;
+    background: url(../app/assets/bg-photos/desktop/halongbaybw.jpg) no-repeat center center;
     background-size: cover;
 }
 
 .contact-me-resume-img {
-    background: url(../app/assets/bg-photos/lisbonbw.jpg) no-repeat center center;
+    background: url(../app/assets/bg-photos/desktop/lisbonbw.jpg) no-repeat center center;
     background-size: cover;
 }
 
 .contact-me-tech-img {
-    background: url(../app/assets/bg-photos/karlstejnbw.jpg) no-repeat center center;
+    background: url(../app/assets/bg-photos/desktop/karlstejnbw.jpg) no-repeat center center;
     background-size: cover;
 }
 
@@ -350,42 +350,42 @@ input {
     }
 
     .home-img {
-        background: url(../app/assets/bg-photos/mfesbw.jpg) no-repeat center center;
+        background: url(../app/assets/bg-photos/mobile/merzougabw.jpg) no-repeat center center;
         background-size: cover;
     }
 
     .tech-img {
-        background: url(../app/assets/bg-photos/mpraguebw.jpg) no-repeat center center;
+        background: url(../app/assets/bg-photos/mobile/praguebw.jpg) no-repeat center center;
         background-size: cover;
     }
 
     .about-img {
-        background: url(../app/assets/bg-photos/mbarcelonabw.jpg) no-repeat center center;
+        background: url(../app/assets/bg-photos/mobile/barcelonabw.jpg) no-repeat center center;
         background-size: cover;
     }
 
     .resume-img {
-        background: url(../app/assets/bg-photos/msintrabw.jpg) no-repeat center center;
+        background: url(../app/assets/bg-photos/mobile/sofiabw.jpg) no-repeat center center;
         background-size: cover;
     }
 
     .contact-img {
-        background: url(../app/assets/bg-photos/msofiabw.jpg) no-repeat center center;
+        background: url(../app/assets/bg-photos/mobile/fesbw.jpg) no-repeat center center;
         background-size: cover;
     }
 
     .contact-me-home-img {
-        background: url(../app/assets/bg-photos/mhalongbaybw.jpg) no-repeat center center;
+        background: url(../app/assets/bg-photos/mobile/halongbaybw.jpg) no-repeat center center;
         background-size: cover;
     }
 
     .contact-me-resume-img {
-        background: url(../app/assets/bg-photos/mlisbonbw.jpg) no-repeat center center;
+        background: url(../app/assets/bg-photos/mobile/lisbonbw.jpg) no-repeat center center;
         background-size: cover;
     }
 
     .contact-me-tech-img {
-        background: url(../app/assets/bg-photos/mkarlstejnbw.jpg) no-repeat center center;
+        background: url(../app/assets/bg-photos/mobile/karlstejnbw.jpg) no-repeat center center;
         background-size: cover;
     }
 
