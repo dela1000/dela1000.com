@@ -1,10 +1,10 @@
 const express = require('express');
 const router = express.Router();
 const path = require('path');
-var nodemailer = require('nodemailer');
-var secrets = require('../secrets/secrets.js');
+const nodemailer = require('nodemailer');
+const secrets = require('../secrets/secrets.js');
 
-var transporter = nodemailer.createTransport({
+const transporter = nodemailer.createTransport({
     service: 'Gmail',
     auth: {
         user: secrets.gmailAddress,
@@ -17,7 +17,7 @@ router.get('/', (req, res) => {
 })
 
 router.post('/email', (req, res) => {
-    var mailOptions = {
+    const mailOptions = {
         from: req.body.email,
         to: secrets.gmailAddress,
         subject: 'Nessage from ' + req.body.name + ' at ' + req.body.email,
