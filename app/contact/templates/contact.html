@@ -1,76 +1,44 @@
-<div class="page-body">
-  <div class="hero-bg contact-img">
-    <div class="hero-content background-darkness">
-      <div class="text-white montserrat font-size-huge font-weight-semi-bold text-center line-height-small padding-left-immense padding-right-immense">
-        CONNECT. CONVERGE. CONVERSE.
-      </div>
-      <div class="text-white garamond font-size-medium font-weight-regular text-center font-italic margin-bottom-medium">
-        Let's discuss your needs
-      </div>
+<div class="hero-bg contact-img">
+  <div class="hero-content background-darkness">
+    <div class="text-white montserrat font-size-huge font-weight-semi-bold text-center line-height-small padding-left-immense padding-right-immense">
+      CONNECT. CONVERGE. CONVERSE.
+    </div>
+    <div class="text-white garamond font-size-medium font-weight-regular text-center font-italic margin-bottom-medium">
+      Let's discuss your needs
     </div>
   </div>
-  <div class="bg-white">
-    <div class="container">
-      <div class="margin-top-immense margin-bottom-immense padding-huge">
-        <div class="garamond font-size-largest text-center margin-bottom-large text-gunpowder-gray">
-          Send me an email and lets create together
-        </div>
-        <form>
-          <div class="card-body">
-            <div class="row">
-              <div class=" col-md margin-bottom-largest">
-                <input class="form-control" type="text" ng-model="name" name="name" placeholder="Your name" minlength="2" required>
-              </div>
-              <div class=" col-md margin-bottom-largest">
-                <input class="form-control" type="email" ng-model="email" name="email" placeholder="Your Email" required>
-              </div>
+</div>
+<div class="bg-white">
+  <div class="container">
+    <div class="margin-top-immense margin-bottom-immense padding-huge">
+      <div class="garamond font-size-largest text-center margin-bottom-large text-gunpowder-gray">
+        Send me an email and lets create together
+      </div>
+      <form>
+        <div class="card-body">
+          <div class="row">
+            <div class=" col-md margin-bottom-largest">
+              <input class="form-control" type="text" ng-model="name" name="name" placeholder="Your name" minlength="2" required>
             </div>
-            <div class="margin-bottom-largest">
-              <textarea class="form-control" type="message" ng-model="message" name="message" placeholder="Your message" rows="8">
-              </textarea>
-            </div>
-            <div class="row justify-content-end">
-              <a class="pointer margin-right-large send-button" target="_blank" ng-click="sendEmail()">
-                <div>
-                  <i class="fas fa-envelope-open"></i> SEND
-                </div>
-              </a>
+            <div class=" col-md margin-bottom-largest">
+              <input class="form-control" type="email" ng-model="email" name="email" placeholder="Your Email" required>
             </div>
           </div>
-          <br/>
-          <br/>
-        </form>
-      </div>
-    </div>
-  </div>
-  <div class="footer">
-    <div class="footer-body container">
-      <div class="hero-content">
-        <div class="text-white garamond font-size-large font-weight-regular text-center line-height-small padding-immense margin-top-immense margin-right-immense margin-left-immense">
-          Create beautiful, responsive, and interactive websites exactly as you want them
+          <div class="margin-bottom-largest">
+            <textarea class="form-control" type="message" ng-model="message" name="message" placeholder="Your message" rows="8">
+            </textarea>
+          </div>
+          <div class="row justify-content-end">
+            <a class="pointer margin-right-large send-button" target="_blank" ng-click="sendEmail()">
+              <div>
+                <i class="fas fa-envelope-open"></i> SEND
+              </div>
+            </a>
+          </div>
         </div>
-        <div class="text-center">
-          <a class="text-white" ui-sref="contact">
-            <i class="padding-medium far fa-envelope fa-lg"></i>
-          </a>
-          <a class="text-white" href="https://www.linkedin.com/in/dela1000/" target="_blank">
-            <i class="padding-medium fab fa-linkedin-in fa-lg"></i>
-          </a>
-          <a class="text-white" href="https://github.com/dela1000" target="_blank">
-            <i class="padding-medium fab fa-github fa-lg"></i>
-          </a>
-          <a class="text-white" href="http://instagram.com/dela1000" target="_blank">
-            <i class="padding-medium fab fa-instagram fa-lg"></i>
-          </a>
-        </div>
-        <div class="text-white font-size-tiny font-weight-light text-center padding-medium margin-bottom-medium margin-right-immense margin-left-immense go-to-top">
-          <a class="pointer" ng-click="goToTop()">Jump to top</a>
-        </div>
-        <div class="text-black font-size-tiny font-weight-regular text-center padding-huge margin-bottom-immense margin-right-immense margin-left-immense">
-          &copy; {{year}} Daniel De La Rosa. All rights reserved.
-          <br> Developed with Angular.js and Node.js
-        </div>
-      </div>
+        <br/>
+        <br/>
+      </form>
     </div>
   </div>
 </div>

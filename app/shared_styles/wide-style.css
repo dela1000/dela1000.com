@@ -32,13 +32,6 @@ input {
     border: 1px solid transparent !important;
 }
 
-.page-body {
-    top: 0px;
-    height: 100%;
-    position: absolute;
-    width: 100%;
-}
-
 .pointer {
     cursor: pointer;
 }
@@ -89,6 +82,10 @@ input {
 
 .navbar {
     z-index: 9999;
+    position: absolute;
+    width: 100vw;
+    margin-left: -50vw;
+    left: 50%;
 }
 
 .nav-circle {
@@ -133,26 +130,8 @@ input {
 
 /*Home*/
 
-#container {
-  position: relative;
-}
-#navi,
-#infoi {
-  width: 100%;
-  height: auto;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-#infoi {
-  z-index: 10;
-}
-
 .hero-bg {
-    height: 100%;
-    max-height: 740px;
-    width: 100%;
-    clear: both;
+    height: 740px;
 }
 
 .home-img {
@@ -229,14 +208,6 @@ input {
     margin-right: 10%;
     margin-bottom: 75px;
 }
-
-.contact-me-bg {
-    height: 100%;
-    max-height: 625px;
-    width: 100%;
-    clear: both;
-}
-
 
 .contact-me-content {
     position: relative;
@@ -389,9 +360,6 @@ input {
         background-size: cover;
     }
 
-    .contact-me-bg {
-        max-height: 800px;
-    }
     .font-size-medium {
         font-size: 21px;
     }
