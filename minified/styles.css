@@ -708,7 +708,7 @@ input {
 }
 
 .resume-img {
-    background: url(../app/assets/bg-photos/desktop/sofiabw.jpg) no-repeat center center;
+    background: url(../app/assets/bg-photos/desktop/keyboardbw.jpg) no-repeat center center;
     background-size: cover;
 }
 
@@ -902,7 +902,7 @@ input {
     }
 
     .resume-img {
-        background: url(../app/assets/bg-photos/mobile/sofiabw.jpg) no-repeat center center;
+        background: url(../app/assets/bg-photos/mobile/keyboardbw.jpg) no-repeat center center;
         background-size: cover;
     }
 
