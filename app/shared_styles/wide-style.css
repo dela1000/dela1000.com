@@ -145,7 +145,7 @@ input {
 }
 
 .about-img {
-    background: url(../app/assets/bg-photos/desktop/barcelonabw.jpg) no-repeat center center;
+    background: url(../app/assets/bg-photos/desktop/eterabw.jpg) no-repeat center center;
     background-size: cover;
 }
 
@@ -170,7 +170,7 @@ input {
 }
 
 .contact-me-tech-img {
-    background: url(../app/assets/bg-photos/desktop/karlstejnbw.jpg) no-repeat center center;
+    background: url(../app/assets/bg-photos/desktop/barcelonabw.jpg) no-repeat center center;
     background-size: cover;
 }
 
@@ -331,7 +331,7 @@ input {
     }
 
     .about-img {
-        background: url(../app/assets/bg-photos/mobile/barcelonabw.jpg) no-repeat center center;
+        background: url(../app/assets/bg-photos/mobile/eterabw.jpg) no-repeat center center;
         background-size: cover;
     }
 
@@ -356,7 +356,7 @@ input {
     }
 
     .contact-me-tech-img {
-        background: url(../app/assets/bg-photos/mobile/karlstejnbw.jpg) no-repeat center center;
+        background: url(../app/assets/bg-photos/mobile/barcelonabw.jpg) no-repeat center center;
         background-size: cover;
     }
 
