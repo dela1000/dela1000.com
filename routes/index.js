@@ -36,7 +36,7 @@ router.post('/email', (req, res) => {
         } else {
             console.log("Message sent");
             res.status(200).json({
-                message: 'Email sent',
+                message: 'Thank you for the message. I will get back to you very soon.',
                 response: response
             })
         }
