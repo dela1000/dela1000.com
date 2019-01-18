@@ -18,8 +18,6 @@ router.get('/', (req, res) => {
 })
 
 router.post('/email', (req, res) => {
-    console.log("+++ 20 index.js secrets.gmailAddress: ", secrets.gmailAddress)
-    console.log("+++ 21 index.js secrets.gmailPass: ", secrets.gmailPass)
     const mailOptions = {
         from: req.body.email,
         to: secrets.gmailAddress,
