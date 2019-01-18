@@ -70,3 +70,10 @@
 .text-black {
     color: black;
 }
+
+.underline {
+  border-bottom: .5px solid currentColor;
+  display: inline-block;
+  line-height: 0.85;
+
+}
