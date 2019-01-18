@@ -6,6 +6,7 @@ const secrets = require('../secrets/secrets.js');
 
 const transporter = nodemailer.createTransport({
     service: 'Gmail',
+    secure: false,
     auth: {
         user: secrets.gmailAddress,
         pass: secrets.gmailPass
@@ -17,6 +18,8 @@ router.get('/', (req, res) => {
 })
 
 router.post('/email', (req, res) => {
+    console.log("+++ 20 index.js secrets.gmailAddress: ", secrets.gmailAddress)
+    console.log("+++ 21 index.js secrets.gmailPass: ", secrets.gmailPass)
     const mailOptions = {
         from: req.body.email,
         to: secrets.gmailAddress,
@@ -25,6 +28,8 @@ router.post('/email', (req, res) => {
     }
 
     transporter.sendMail(mailOptions, function(err, response) {
+        console.log("+++ 28 index.js response: ", response)
+        console.log("+++ 29 index.js err: ", err)
         if (err) {
             console.log("err");
             console.log(err);
