@@ -21,7 +21,7 @@ router.post('/email', (req, res) => {
     const mailOptions = {
         from: req.body.email,
         to: secrets.gmailAddress,
-        subject: 'Nessage from ' + req.body.name + ' at ' + req.body.email  + ' from ' + req.body.source,
+        subject: 'Message from ' + req.body.name + ' at ' + req.body.email  + ' from ' + req.body.source,
         text: 'Name: ' + req.body.name + ', ' + 'Email: ' + req.body.email + ', ' + 'Message: ' + req.body.message
     }
 
