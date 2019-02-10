@@ -807,12 +807,47 @@ input {
     margin-top: 100px
 }
 .projects-text {
-    position: relative; top: 50%; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%);
+    position: relative; top: 50%; 
+    -webkit-transform: translateY(-50%); 
+    -ms-transform: translateY(-50%); 
+    transform: translateY(-50%);
+}
+
+.web-selection {
+    display: block;
+}
+.mobile-selection {
+    display: none;
 }
 
 .project-bg {
     width: 250px;
     height: 444px;
+}
+
+.beer-splash-img {
+    background: url(../app/assets/projects/rendezbrew/splash.png) no-repeat center center;
+    background-size: cover;
+    display: block;
+    margin: 0 auto;
+}
+.beer-one-img {
+    background: url(../app/assets/projects/rendezbrew/home.png) no-repeat center center;
+    background-size: cover;
+    display: block;
+    margin: 0 auto;
+}
+.beer-two-img {
+    background: url(../app/assets/projects/rendezbrew/myevent.png) no-repeat center center;
+    background-size: cover;
+    display: block;
+    margin: 0 auto;
+}
+.beer-three-img {
+    background: url(../app/assets/projects/rendezbrew/event.png) no-repeat center center;
+    background-size: cover;
+    display: block;
+    margin: 0 auto;
 }
 
 .acro-splash-img {
@@ -892,6 +927,14 @@ input {
 
 /* Relative CSS */
 
+@media only screen and (max-width: 768px) {
+    .project-bg {
+        width: 125px;
+        height: 222px;
+    }
+}
+
+
 @media only screen and (max-width: 990px) {
     /* navbar */
     /*Breakpoint for hamburger menu*/
@@ -960,10 +1003,6 @@ input {
         background-size: cover;
     }
 
-    .font-size-medium {
-        font-size: 21px;
-    }
-
     .font-size-largest {
         font-size: 36px;
     }
@@ -975,7 +1014,15 @@ input {
     .go-to-top {
         display: block;
     }
+}
 
+@media only screen and (max-width: 1200px) {
+    .web-selection {
+        display: none;
+    }
+    .mobile-selection {
+        display: block;
+    }
 }
 .alert-modal {
     width: 500px;
