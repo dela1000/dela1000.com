@@ -16,6 +16,7 @@ rootCtrl.controller("rootCtrl", ($scope, $rootScope, $state, $window, trafficCop
     // Navbar selectors
     $scope.navbarOptions = [
         { value: 'home' },
+        { value: 'projects' },
         { value: 'resume' },
         { value: 'tech' },
         { value: 'about' },
@@ -120,6 +121,10 @@ App.config(function ($stateProvider, $urlRouterProvider) {
         .state('tech', {
             url: '/tech',
             templateUrl: '../app/tech/templates/tech.html'
+        })
+        .state('projects', {
+            url: '/projects',
+            templateUrl: '../app/projects/templates/projects.html'
         })
         .state('about', {
             url: '/about',

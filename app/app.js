@@ -16,6 +16,7 @@ rootCtrl.controller("rootCtrl", ($scope, $rootScope, $state, $window, trafficCop
     // Navbar selectors
     $scope.navbarOptions = [
         { value: 'home' },
+        { value: 'projects' },
         { value: 'resume' },
         { value: 'tech' },
         { value: 'about' },

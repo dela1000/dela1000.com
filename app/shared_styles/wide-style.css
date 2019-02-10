@@ -148,7 +148,10 @@ input {
     background: url(../app/assets/bg-photos/desktop/eterabw.jpg) no-repeat center center;
     background-size: cover;
 }
-
+.projects-img {
+    background: url(../app/assets/bg-photos/desktop/acropolisbw.jpg) no-repeat center center;
+    background-size: cover;
+}
 .resume-img {
     background: url(../app/assets/bg-photos/desktop/keyboardbw.jpg) no-repeat center center;
     background-size: cover;
@@ -168,14 +171,16 @@ input {
     background: url(../app/assets/bg-photos/desktop/lisbonbw.jpg) no-repeat center center;
     background-size: cover;
 }
-
 .contact-me-tech-img {
     background: url(../app/assets/bg-photos/desktop/barcelonabw.jpg) no-repeat center center;
     background-size: cover;
 }
-
 .contact-me-about-img{
     background: url(../app/assets/bg-photos/desktop/sintrabw.jpg) no-repeat center center;
+    background-size: cover;
+}
+.contact-me-projects-img{
+    background: url(../app/assets/bg-photos/mobile/albaiuliabw.jpg) no-repeat center center;
     background-size: cover;
 }
 
@@ -247,6 +252,40 @@ input {
 .white-button:hover {
     color: #1a1a1a;
     background-color: white;
+}
+
+/*Projects*/
+
+.projects-holder {
+    margin-bottom: 100px; 
+    margin-top: 100px
+}
+.projects-text {
+    position: relative; top: 50%; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%);
+}
+
+.project-bg {
+    width: 250px;
+    height: 444px;
+}
+
+.acro-splash-img {
+    background: url(../app/assets/projects/acrogenerator/splash.png) no-repeat center center;
+    background-size: cover;
+    display: block;
+    margin: 0 auto;
+}
+.acro-one-img {
+    background: url(../app/assets/projects/acrogenerator/firstview.png) no-repeat center center;
+    background-size: cover;
+    display: block;
+    margin: 0 auto;
+}
+.acro-two-img {
+    background: url(../app/assets/projects/acrogenerator/secondview.png) no-repeat center center;
+    background-size: cover;
+    display: block;
+    margin: 0 auto;
 }
 
 /*Contact*/
@@ -339,17 +378,18 @@ input {
         background: url(../app/assets/bg-photos/mobile/eterabw.jpg) no-repeat center center;
         background-size: cover;
     }
-
+    .projects-img {
+        background: url(../app/assets/bg-photos/mobile/acropolisbw.jpg) no-repeat center center;
+        background-size: cover;
+    }
     .resume-img {
         background: url(../app/assets/bg-photos/mobile/keyboardbw.jpg) no-repeat center center;
         background-size: cover;
     }
-
     .contact-img {
         background: url(../app/assets/bg-photos/mobile/fesbw.jpg) no-repeat center center;
         background-size: cover;
     }
-
     .contact-me-home-img {
         background: url(../app/assets/bg-photos/mobile/halongbaybw.jpg) no-repeat center center;
         background-size: cover;
@@ -367,6 +407,10 @@ input {
 
     .contact-me-about-img{
         background: url(../app/assets/bg-photos/mobile/sintrabw.jpg) no-repeat center center;
+        background-size: cover;
+    }
+    .contact-me-projects-img{
+        background: url(../app/assets/bg-photos/mobile/albaiuliabw.jpg) no-repeat center center;
         background-size: cover;
     }
 

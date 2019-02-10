@@ -16,6 +16,10 @@ App.config(function ($stateProvider, $urlRouterProvider) {
             url: '/tech',
             templateUrl: '../app/tech/templates/tech.html'
         })
+        .state('projects', {
+            url: '/projects',
+            templateUrl: '../app/projects/templates/projects.html'
+        })
         .state('about', {
             url: '/about',
             templateUrl: '../app/about/templates/about.html'
