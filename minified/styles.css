@@ -868,6 +868,15 @@ input {
     display: block;
     margin: 0 auto;
 }
+    
+.store-links {
+    height: 120px;
+    width: auto;
+}
+
+.store-links:active {
+    transform: translateY(2px);
+}
 
 /*Contact*/
 
@@ -928,9 +937,20 @@ input {
 /* Relative CSS */
 
 @media only screen and (max-width: 768px) {
+    .projects-holder {
+        margin-top: 70px;
+        margin-bottom: 60px;
+    }
     .project-bg {
         width: 125px;
         height: 222px;
+    }
+    .store-links {
+        height: 80px;
+        width: auto;
+    }
+    .link-holder {
+        margin-top: 25px;
     }
 }
 
