@@ -18,13 +18,16 @@ router.get('/', (req, res) => {
 })
 
 router.post('/email', (req, res) => {
+    const clientIp = req.clientIp;
+    console.log("+++ 24 index.js clientIp: ", clientIp)
+
     const mailOptions = {
         from: req.body.email,
         to: secrets.gmailAddress,
         subject: 'Message from ' + req.body.name + ' at ' + req.body.email  + ' from ' + req.body.source,
-        text: 'Name: ' + req.body.name + ', ' + 'Email: ' + req.body.email + ', ' + 'Message: ' + req.body.message
+        text: 'Name: ' + req.body.name + ', ' + 'Email: ' + req.body.email + ', ' + 'Message: ' + req.body.message  + ', ' + 'IP Address: ' + clientIp
     }
-
+    console.log("+++ 30 index.js mailOptions: ", mailOptions)
     transporter.sendMail(mailOptions, function(err, response) {
         console.log("+++ 28 index.js response: ", response)
         console.log("+++ 29 index.js err: ", err)
