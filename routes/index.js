@@ -27,7 +27,7 @@ router.post('/email', (req, res) => {
         subject: 'Message from ' + req.body.name + ' at ' + req.body.email  + ' from ' + req.body.source,
         text: 'Name: ' + req.body.name + ', ' + 'Email: ' + req.body.email + ', ' + 'Message: ' + req.body.message + ', IP Address: ' + clientIp
     }
-
+    console.log("+++ 30 index.js mailOptions: ", mailOptions)
     transporter.sendMail(mailOptions, function(err, response) {
         console.log("+++ 28 index.js response: ", response)
         console.log("+++ 29 index.js err: ", err)
