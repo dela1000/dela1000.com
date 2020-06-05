@@ -3,6 +3,9 @@ const app = express();
 const path = require('path');
 const cors = require('cors');
 const bodyParser = require('body-parser');
+const requestIp = require('request-ip');
+
+app.use(requestIp.mw())
 
 // Routes file
 const routes = require('./routes/index');
