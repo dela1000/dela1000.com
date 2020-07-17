@@ -15,7 +15,7 @@
       Experience goes a long way
     </div>
     <div class="montserrat font-size-medium font-weight-light text-center line-height-medium text-gunpowder-gray">
-      With over six years in the technology industry and more than three as a Full Stack software engineer, I have cultivated a strong background in program development, providing results on all the projects I have worked on.
+      With over eight years in the technology industry and more than four as a Full Stack software engineer, I have cultivated a strong background in program development, providing positive results on all the projects in which I have participated.
     </div>
   </div>
 </div>
@@ -44,10 +44,8 @@
         <div class="margin-top-medium font-weight-light">
           {{item.title}}
         </div>
-        <ul class="font-weight-light margin-top-medium">
-          <li class="margin-top-small">{{item.bulletOne}}</li>
-          <li class="margin-top-small">{{item.bulletTwo}}</li>
-          <li class="margin-top-small">{{item.bulletThree}}</li>
+        <ul class="font-weight-light margin-top-medium" ng-repeat="point in item.bulletPoints">
+          <li class="margin-top-small">{{point}}</li>
         </ul>
       </div>
     </div>
