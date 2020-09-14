@@ -43,7 +43,7 @@ router.post('/email', (req, res) => {
         var textData = ' Name: ' + req.body.name + '\n Email: ' + req.body.email  + '\n\n Message: ' + req.body.message  + '\n\n IP Address: ' + clientIp;
 
         if(data){
-            console.log("+++ 46 index.js data: ", JSON.stringify(data, null, "\t"));
+            data = JSON.parse(data);
             textData = textData 
                 + '\n continent_name: ' + data.continent_name 
                 + '\n country_name: ' + data.country_name 
