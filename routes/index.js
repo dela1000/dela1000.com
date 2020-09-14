@@ -22,11 +22,12 @@ router.post('/email', (req, res) => {
     const clientIp = req.clientIp;
     console.log("+++ 24 index.js clientIp: ", clientIp);
 
-    if (clientIp.substr(0, 7) == "::ffff:") {
-      clientIp = clientIp.substr(7)
-    }
+    // if (clientIp.substr(0, 7) == "::ffff:") {
+    //   clientIp = clientIp.substr(7)
+    // }
 
     var ipstackLink = 'https://api.ipstack.com/' + clientIp + '?access_key=secrets.ipstack';
+    console.log("+++ 30 index.js ipstackLink: ", ipstackLink)
 
     https.get(ipstackLink, (resp) => {
       let data = '';
@@ -39,6 +40,7 @@ router.post('/email', (req, res) => {
       // The whole response has been received. Print out the result.
       resp.on('end', () => {
         var ipLocationData = JSON.parse(data).explanation;
+        console.log("+++ 43 index.js ipLocationData: ", ipLocationData)
 
         var textData = ' Name: ' + req.body.name + '\n Email: ' + req.body.email  + '\n IP Address: ' + clientIp + '\n\n Message: ' + req.body.message;
 
