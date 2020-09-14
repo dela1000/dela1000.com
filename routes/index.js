@@ -39,6 +39,7 @@ router.post('/email', (req, res) => {
 
       // The whole response has been received. Print out the result.
       resp.on('end', () => {
+        console.log("+++ 42 index.js data: ", data)
         var ipLocationData = JSON.parse(data).explanation;
         console.log("+++ 43 index.js ipLocationData: ", ipLocationData)
 
