@@ -25,7 +25,7 @@ router.post('/email', (req, res) => {
         from: req.body.email,
         to: secrets.gmailAddress,
         subject: 'Message from ' + req.body.name + ' at ' + req.body.email  + ' from ' + req.body.source,
-        text: 'Name: ' + req.body.name + ', ' + 'Email: ' + req.body.email + ', ' + 'Message: ' + req.body.message + ', IP Address: ' + clientIp
+        text: ' Name: ' + req.body.name + '\n Email: ' + req.body.email  + '\n IP Address: ' + clientIp + '\n\n Message: ' + req.body.message
     }
     console.log("+++ 30 index.js mailOptions: ", mailOptions)
     transporter.sendMail(mailOptions, function(err, response) {
