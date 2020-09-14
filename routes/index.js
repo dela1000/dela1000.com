@@ -39,20 +39,18 @@ router.post('/email', (req, res) => {
 
       // The whole response has been received. Print out the result.
       resp.on('end', () => {
-        console.log("+++ 42 index.js data: ", data)
-        var ipLocationData = data;
 
         var textData = ' Name: ' + req.body.name + '\n Email: ' + req.body.email  + '\n\n Message: ' + req.body.message  + '\n\n IP Address: ' + clientIp;
 
-        if(ipLocationData){
+        if(data){
             textData = textData 
-                + '\n continent_name: ' + ipLocationData.continent_name 
-                + '\n country_name: ' + ipLocationData.country_name 
-                + '\n region_name: ' + ipLocationData.region_name 
-                + '\n city: ' + ipLocationData.city 
-                + '\n zip: ' + ipLocationData.zip 
-                + '\n latitude: ' + ipLocationData.latitude 
-                + '\n longitude: ' + ipLocationData.longitude
+                + '\n continent_name: ' + data.continent_name 
+                + '\n country_name: ' + data.country_name 
+                + '\n region_name: ' + data.region_name 
+                + '\n city: ' + data.city 
+                + '\n zip: ' + data.zip 
+                + '\n latitude: ' + data.latitude 
+                + '\n longitude: ' + data.longitude
         }
 
         const mailOptions = {
