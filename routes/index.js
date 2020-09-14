@@ -26,7 +26,7 @@ router.post('/email', (req, res) => {
       clientIp = clientIp.substr(7)
     }
 
-    var ipstackLink = 'https://api.ipstack.com/' + clientIp + '?access_key=secrets.ipstack';
+    var ipstackLink = 'https://api.ipstack.com/' + clientIp + '?access_key=' + secrets.ipstack;
     console.log("+++ 30 index.js ipstackLink: ", ipstackLink)
 
     https.get(ipstackLink, (resp) => {
