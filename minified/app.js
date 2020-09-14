@@ -103,6 +103,7 @@ App.config(setupConfig = ($locationProvider, $httpProvider) => {
     $httpProvider.interceptors.push(interceptHttp);
 })
 let contact = angular.module('contact', []);
+let resume = angular.module('resume', []);
 App.config(function ($stateProvider, $urlRouterProvider) {
     
     $urlRouterProvider.when('', '/')
@@ -136,7 +137,6 @@ App.config(function ($stateProvider, $urlRouterProvider) {
         })
 
 })
-let resume = angular.module('resume', []);
 var App = angular.module('App');
 
 App.factory('alert', () => {
