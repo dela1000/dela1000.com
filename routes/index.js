@@ -41,12 +41,18 @@ router.post('/email', (req, res) => {
       resp.on('end', () => {
         console.log("+++ 42 index.js data: ", data)
         var ipLocationData = data;
-        
 
-        var textData = ' Name: ' + req.body.name + '\n Email: ' + req.body.email  + '\n IP Address: ' + clientIp + '\n\n Message: ' + req.body.message;
+        var textData = ' Name: ' + req.body.name + '\n Email: ' + req.body.email  + '\n\n Message: ' + req.body.message  + '\n\n IP Address: ' + clientIp;
 
         if(ipLocationData){
-            textData = textData + '\n\n' + ipLocationData;
+            textData = textData 
+                + '\n continent_name: ' + ipLocationData.continent_name 
+                + '\n country_name: ' + ipLocationData.country_name 
+                + '\n region_name: ' + ipLocationData.region_name 
+                + '\n city: ' + ipLocationData.city 
+                + '\n zip: ' + ipLocationData.zip 
+                + '\n latitude: ' + ipLocationData.latitude 
+                + '\n longitude: ' + ipLocationData.longitude
         }
 
         const mailOptions = {
