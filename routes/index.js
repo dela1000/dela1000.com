@@ -3,7 +3,7 @@ const router = express.Router();
 const path = require('path');
 const nodemailer = require('nodemailer');
 const secrets = require('../secrets/secrets.js');
-const https = require('https');
+const http = require('http');
 
 const transporter = nodemailer.createTransport({
     service: 'Gmail',
@@ -29,7 +29,7 @@ router.post('/email', (req, res) => {
     var ipstackLink = 'http://api.ipstack.com/' + clientIp + '?access_key=' + secrets.ipstack;
     console.log("+++ 30 index.js ipstackLink: ", ipstackLink)
 
-    https.get(ipstackLink, (resp) => {
+    http.get(ipstackLink, (resp) => {
       let data = '';
 
       // A chunk of data has been recieved.
