@@ -42,6 +42,6 @@ resume.controller("resumeCtrl", function($scope, $window, $http, appConstants) {
         }
     ];
 
-    $scope.resumeLink = appConstants.urlBase + "/public/DanielDeLaRosaResume2018.pdf";
+    $scope.resumeLink = appConstants.urlBase + "/public/DanielDeLaRosaResume.pdf";
 
 })
