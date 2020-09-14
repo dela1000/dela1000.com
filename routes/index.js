@@ -46,7 +46,7 @@ router.post('/email', (req, res) => {
         var textData = ' Name: ' + req.body.name + '\n Email: ' + req.body.email  + '\n IP Address: ' + clientIp + '\n\n Message: ' + req.body.message;
 
         if(ipLocationData){
-            textData = text + '\n\n' + ipLocationData;
+            textData = textData + '\n\n' + ipLocationData;
         }
 
         const mailOptions = {
