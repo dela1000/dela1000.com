@@ -19,12 +19,12 @@ router.get('/', (req, res) => {
 })
 
 router.post('/email', (req, res) => {
-    const clientIp = req.clientIp;
+    let clientIp = req.clientIp;
     console.log("+++ 24 index.js clientIp: ", clientIp);
 
-    // if (clientIp.substr(0, 7) == "::ffff:") {
-    //   clientIp = clientIp.substr(7)
-    // }
+    if (clientIp.substr(0, 7) == "::ffff:") {
+      clientIp = clientIp.substr(7)
+    }
 
     var ipstackLink = 'https://api.ipstack.com/' + clientIp + '?access_key=secrets.ipstack';
     console.log("+++ 30 index.js ipstackLink: ", ipstackLink)
