@@ -1,27 +1,25 @@
-const gulp = require('gulp')
-const concat = require('gulp-concat')
+const { src, dest, watch, series, parallel } = require('gulp');
+const concat = require('gulp-concat');
 
-// concat js files
-gulp.task('js', () => {
-  return gulp.src('./app/**/*.js')
-  .pipe(concat('app.js'))
-  .pipe(gulp.dest('minified'))
-})
+const files = { 
+    css: './app/**/*.css',
+    js: './app/**/*.js'
+}
 
-// concat css files
-gulp.task('css', () => {
-  return gulp.src('./app/**/*.css')
-  .pipe(concat('styles.css'))
-  .pipe(gulp.dest('minified'))
-})
+function js(){
+  return src([files.js])
+    .pipe(concat('app.js'))
+    .pipe(dest('minified'));
+}
 
-// watch files for changes (run command `gulp watch`)
-gulp.task('watch', ['js', 'css'], () => {
-  gulp.watch('./app/**/*.js', ['js'])
-  gulp.watch('./app/**/*.css', ['css'])
-})
+function css(){
+  return src(files.css)
+    .pipe(concat('styles.css'))
+    .pipe(dest('minified'))
+}
 
-gulp.task('default', function() {
-  gulp.run('styles')
-  gulp.run('js')
-})
+function watcher(){
+  watch([files.css, files.js], null, series(parallel(css, js)));
+}
+
+exports.default = series( parallel(css, js), watcher );
