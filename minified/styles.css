@@ -702,17 +702,22 @@ input {
     background: url(../app/assets/bg-photos/desktop/keyboardbw.jpg) no-repeat center center;
     background-size: cover;
 }
-
+.travel-img {
+    background: url(../app/assets/bg-photos/desktop/benchbw.jpg) no-repeat center center;
+    background-size: cover;
+}
+.travel-bottom-img {
+    background: url(../app/assets/bg-photos/desktop/mexicocitybw.jpg) no-repeat center center;
+    background-size: cover;
+}
 .contact-img {
     background: url(../app/assets/bg-photos/desktop/fesbw.jpg) no-repeat center center;
     background-size: cover;
 }
-
 .contact-me-home-img {
     background: url(../app/assets/bg-photos/desktop/halongbaybw.jpg) no-repeat center center;
     background-size: cover;
 }
-
 .contact-me-resume-img {
     background: url(../app/assets/bg-photos/desktop/lisbonbw.jpg) no-repeat center center;
     background-size: cover;
@@ -878,6 +883,39 @@ input {
     transform: translateY(2px);
 }
 
+/*Travel*/
+
+.travel-holder {
+    margin-bottom: 100px; 
+    margin-top: 100px
+}
+.travel-text {
+    position: relative; top: 50%; 
+    -webkit-transform: translateY(-50%); 
+    -ms-transform: translateY(-50%); 
+    transform: translateY(-50%);
+}
+
+.travel-bg {
+    width: 250px;
+    height: 444px;
+}
+
+
+.travel-daniel-img {
+    background: url(../app/assets/travel_photos/danielIreland.jpg) no-repeat center center;
+    background-size: cover;
+    display: block;
+    margin: 0 auto;
+}
+
+.travel-rachel-img {
+    background: url(../app/assets/travel_photos/RachelMorocco.jpg) no-repeat center center;
+    background-size: cover;
+    display: block;
+    margin: 0 auto;
+}
+
 /*Contact*/
 
 .send-button {
@@ -977,12 +1015,10 @@ input {
         background: url(../app/assets/bg-photos/mobile/merzougabw.jpg) no-repeat center center;
         background-size: cover;
     }
-
     .tech-img {
         background: url(../app/assets/bg-photos/mobile/praguebw.jpg) no-repeat center center;
         background-size: cover;
     }
-
     .about-img {
         background: url(../app/assets/bg-photos/mobile/eterabw.jpg) no-repeat center center;
         background-size: cover;
@@ -993,6 +1029,14 @@ input {
     }
     .resume-img {
         background: url(../app/assets/bg-photos/mobile/keyboardbw.jpg) no-repeat center center;
+        background-size: cover;
+    }
+    .travel-img {
+        background: url(../app/assets/bg-photos/mobile/benchbw.jpg) no-repeat center center;
+        background-size: cover;
+    }
+    .travel-bottom-img {
+        background: url(../app/assets/bg-photos/mobile/mexicocitybw.jpg) no-repeat center center;
         background-size: cover;
     }
     .contact-img {

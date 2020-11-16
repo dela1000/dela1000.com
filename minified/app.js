@@ -5,7 +5,8 @@ var App = angular.module('App', [
     'rootCtrl',
     'sharedDirectives',
     'resume',
-    'contact'
+    'contact',
+    'travel',
 ])
 
 let sharedDirectives = angular.module('sharedDirectives', [])
@@ -20,6 +21,7 @@ rootCtrl.controller("rootCtrl", ($scope, $rootScope, $state, $window, trafficCop
         { value: 'resume' },
         { value: 'tech' },
         { value: 'about' },
+        { value: 'travel' },
         { value: 'contact' }
     ]
     // navbar routing
@@ -111,7 +113,7 @@ App.config(function ($stateProvider, $urlRouterProvider) {
     $stateProvider
         .state('home', {
             url: '/',
-            templateUrl: '../app/home/templates/home.html'
+            templateUrl: '../app/home/templates/home.html',
         })
         .state('resume', {
             url: '/resume',
@@ -120,7 +122,7 @@ App.config(function ($stateProvider, $urlRouterProvider) {
         })
         .state('tech', {
             url: '/tech',
-            templateUrl: '../app/tech/templates/tech.html'
+            templateUrl: '../app/tech/templates/tech.html',
         })
         .state('projects', {
             url: '/projects',
@@ -128,7 +130,12 @@ App.config(function ($stateProvider, $urlRouterProvider) {
         })
         .state('about', {
             url: '/about',
-            templateUrl: '../app/about/templates/about.html'
+            templateUrl: '../app/about/templates/about.html',
+        })
+        .state('travel', {
+            url: '/travel',
+            templateUrl: '../app/travel/templates/travel.html',
+            controller: 'travelCtrl',
         })
         .state('contact', {
             url: '/contact',
@@ -244,6 +251,7 @@ App.factory("trafficCop", () => {
         startRequest: startRequest,
     });
 });
+let travel = angular.module('travel', []);
 contact.controller("contactCtrl", function($scope, $http, appConstants, alert) {
 
     $scope.sendEmail = () => {
@@ -285,6 +293,20 @@ contact.controller("contactCtrl", function($scope, $http, appConstants, alert) {
     let validateEmail = (email) => {
         let re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         return re.test(String(email).toLowerCase());
+    }
+})
+sharedDirectives.directive('alertModal', (appConstants, alert) => {
+    return {
+        restrict: 'E',
+        templateUrl: "/app/shared_directives/alert_modal/alert_modal.html",
+        scope: {},
+        link: (scope, elem, attr) => {
+            scope.alert = alert;
+
+            scope.hideModal = () => {
+                alert.visible = false;
+            }
+        }
     }
 })
 resume.controller("resumeCtrl", function($scope, $window, $http, appConstants) {
@@ -334,17 +356,46 @@ resume.controller("resumeCtrl", function($scope, $window, $http, appConstants) {
     $scope.resumeLink = appConstants.urlBase + "/public/DanielDeLaRosaResume.pdf";
 
 })
-sharedDirectives.directive('alertModal', (appConstants, alert) => {
-    return {
-        restrict: 'E',
-        templateUrl: "/app/shared_directives/alert_modal/alert_modal.html",
-        scope: {},
-        link: (scope, elem, attr) => {
-            scope.alert = alert;
+travel.controller("travelCtrl", function($scope, $http, appConstants, alert) {
 
-            scope.hideModal = () => {
-                alert.visible = false;
-            }
+    $scope.sendEmail = () => {
+
+        if (!$scope.name && !$scope.email) {
+            alert.setMessage('Please add your name and email')
+            return;
         }
+
+        if (!validateEmail($scope.email)) {
+            alert.setMessage('Please add a valid email address')
+            return;
+        }
+
+        if (!$scope.message) {
+            alert.setMessage('Please add a message')
+            return;
+        }
+
+        let payload = {
+            name: $scope.name,
+            email: $scope.email,
+            message: $scope.message,
+            source: 'dela1000TravelContact'
+        }
+        $http.post(appConstants.urlBase + '/email', payload)
+            .then((response) => {
+
+                if (response.status === 200) {
+                    delete $scope.name;
+                    delete $scope.email;
+                    delete $scope.message;
+                }
+
+                alert.setMessage(response.data.message)
+            })
+    }
+
+    let validateEmail = (email) => {
+        let re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(String(email).toLowerCase());
     }
 })

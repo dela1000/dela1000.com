@@ -5,7 +5,8 @@ var App = angular.module('App', [
     'rootCtrl',
     'sharedDirectives',
     'resume',
-    'contact'
+    'contact',
+    'travel',
 ])
 
 let sharedDirectives = angular.module('sharedDirectives', [])
@@ -20,6 +21,7 @@ rootCtrl.controller("rootCtrl", ($scope, $rootScope, $state, $window, trafficCop
         { value: 'resume' },
         { value: 'tech' },
         { value: 'about' },
+        { value: 'travel' },
         { value: 'contact' }
     ]
     // navbar routing

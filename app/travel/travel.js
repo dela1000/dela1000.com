@@ -1,0 +1,1 @@
+let travel = angular.module('travel', []);
