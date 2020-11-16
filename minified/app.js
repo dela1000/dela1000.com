@@ -295,20 +295,6 @@ contact.controller("contactCtrl", function($scope, $http, appConstants, alert) {
         return re.test(String(email).toLowerCase());
     }
 })
-sharedDirectives.directive('alertModal', (appConstants, alert) => {
-    return {
-        restrict: 'E',
-        templateUrl: "/app/shared_directives/alert_modal/alert_modal.html",
-        scope: {},
-        link: (scope, elem, attr) => {
-            scope.alert = alert;
-
-            scope.hideModal = () => {
-                alert.visible = false;
-            }
-        }
-    }
-})
 resume.controller("resumeCtrl", function($scope, $window, $http, appConstants) {
 
     $scope.experience = [{
@@ -355,6 +341,20 @@ resume.controller("resumeCtrl", function($scope, $window, $http, appConstants) {
 
     $scope.resumeLink = appConstants.urlBase + "/public/DanielDeLaRosaResume.pdf";
 
+})
+sharedDirectives.directive('alertModal', (appConstants, alert) => {
+    return {
+        restrict: 'E',
+        templateUrl: "/app/shared_directives/alert_modal/alert_modal.html",
+        scope: {},
+        link: (scope, elem, attr) => {
+            scope.alert = alert;
+
+            scope.hideModal = () => {
+                alert.visible = false;
+            }
+        }
+    }
 })
 travel.controller("travelCtrl", function($scope, $http, appConstants, alert) {
 

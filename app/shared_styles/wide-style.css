@@ -161,7 +161,7 @@ input {
     background-size: cover;
 }
 .travel-bottom-img {
-    background: url(../app/assets/bg-photos/desktop/mexicocitybw.jpg) no-repeat center center;
+    background: url(../app/assets/bg-photos/desktop/cliffsbw.jpg) no-repeat center center;
     background-size: cover;
 }
 .contact-img {
@@ -490,7 +490,7 @@ input {
         background-size: cover;
     }
     .travel-bottom-img {
-        background: url(../app/assets/bg-photos/mobile/mexicocitybw.jpg) no-repeat center center;
+        background: url(../app/assets/bg-photos/mobile/cliffsbw.jpg) no-repeat center center;
         background-size: cover;
     }
     .contact-img {
