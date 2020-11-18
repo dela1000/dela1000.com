@@ -482,6 +482,10 @@
     font-size: 16px;
 }
 
+.font-size-smedium {
+    font-size: 20px;
+}
+
 .font-size-medium {
     font-size: 24px;
 }
@@ -586,6 +590,12 @@ input {
     background-color: white;
     padding-top: 75px;
     padding-bottom: 75px;
+}
+
+.bg-white-small {
+    background-color: white;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 .loading {

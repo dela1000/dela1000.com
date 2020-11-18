@@ -1,4 +1,9 @@
-travel.controller("travelCtrl", function($scope, $http, appConstants, alert) {
+travel.controller("travelCtrl", function($scope, $http, $location, $anchorScroll, appConstants, alert) {
+
+    $scope.scrollTo = function (location) {
+        $location.hash(location);
+        $anchorScroll();
+    }
 
     $scope.sendEmail = () => {
 
