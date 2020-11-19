@@ -290,6 +290,11 @@ input {
     height: 444px;
 }
 
+.travel-pic {
+    width: 500px;
+    height: 500px;
+}
+
 .beer-splash-img {
     background: url(../app/assets/projects/rendezbrew/splash.png) no-repeat center center;
     background-size: cover;
@@ -359,6 +364,13 @@ input {
 .travel-bg {
     width: 250px;
     height: 444px;
+}
+
+.travel-things-img {
+    background: url(../app/assets/travel_photos/athens.jpg) no-repeat center center;
+    background-size: cover;
+    display: block;
+    margin: 0 auto;
 }
 
 
@@ -442,6 +454,10 @@ input {
     .project-bg {
         width: 125px;
         height: 222px;
+    }
+    .travel-pic {
+        width: 300px;
+        height: 300px;
     }
     .store-links {
         height: 80px;
