@@ -8,6 +8,7 @@
     </div>
   </div>
 </div>
+
 <div class="container padding-top-immense">
   <div class="margin-immense">
     <div class="garamond font-size-largest text-center margin-bottom-medium text-gunpowder-gray">
@@ -30,10 +31,10 @@
     </div>
   </div>
 </div>
-
-<div ng-include class="mobile-selection" src="'app/travel/templates/things_covered_mobile.html'"></div>
-<div ng-include class="web-selection" src="'app/travel/templates/things_covered_web.html'"></div>
-
+<div class="margin-bottom-immense">
+  <div ng-include class="mobile-selection" src="'app/travel/templates/things_covered_mobile.html'"></div>
+  <div ng-include class="web-selection" src="'app/travel/templates/things_covered_web.html'"></div>
+</div>
 <div class="bg-white-small">
   <div class="margin-tiny text-center">
     <a ng-click="scrollTo('contact_form')">
@@ -44,8 +45,10 @@
   </div>
 </div>
 
-<div ng-include class="mobile-selection" src="'app/travel/templates/travel_mobile.html'"></div>
-<div ng-include class="web-selection" src="'app/travel/templates/travel_web.html'"></div>
+<div class="margin-top-immense margin-bottom-immense">
+  <div ng-include class="mobile-selection" src="'app/travel/templates/travel_mobile.html'"></div>
+  <div ng-include class="web-selection" src="'app/travel/templates/travel_web.html'"></div>
+</div>
 
 <div id="contact_form" class="bg-white">
   <div class="container">
@@ -75,8 +78,6 @@
             </a>
           </div>
         </div>
-        <br/>
-        <br/>
       </form>
     </div>
   </div>
@@ -100,8 +101,6 @@
     <img src="app/assets/travel_photos/rndsafari.png" title="Manyeleti, South Africa">
   </div>
 </div>
-
-
 
 <div class="hero-bg travel-bottom-img margin-top-mini">
   <div class="contact-me-content background-darkness">
