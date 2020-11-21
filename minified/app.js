@@ -14,6 +14,10 @@ let sharedDirectives = angular.module('sharedDirectives', [])
 let rootCtrl = angular.module('rootCtrl', []);
 
 rootCtrl.controller("rootCtrl", ($scope, $rootScope, $state, $window, trafficCop) => {
+
+    $scope.yearsAsDev = moment().diff('2015-01-01', 'years', false);
+    $scope.yearsinTech = moment().diff('2011-01-01', 'years', false);
+
     // Navbar selectors
     $scope.navbarOptions = [
         { value: 'home' },
@@ -105,7 +109,6 @@ App.config(setupConfig = ($locationProvider, $httpProvider) => {
     $httpProvider.interceptors.push(interceptHttp);
 })
 let contact = angular.module('contact', []);
-let resume = angular.module('resume', []);
 App.config(function ($stateProvider, $urlRouterProvider) {
     
     $urlRouterProvider.when('', '/')
@@ -144,6 +147,7 @@ App.config(function ($stateProvider, $urlRouterProvider) {
         })
 
 })
+let resume = angular.module('resume', []);
 var App = angular.module('App');
 
 App.factory('alert', () => {

@@ -14,6 +14,10 @@ let sharedDirectives = angular.module('sharedDirectives', [])
 let rootCtrl = angular.module('rootCtrl', []);
 
 rootCtrl.controller("rootCtrl", ($scope, $rootScope, $state, $window, trafficCop) => {
+
+    $scope.yearsAsDev = moment().diff('2015-01-01', 'years', false);
+    $scope.yearsinTech = moment().diff('2011-01-01', 'years', false);
+
     // Navbar selectors
     $scope.navbarOptions = [
         { value: 'home' },
