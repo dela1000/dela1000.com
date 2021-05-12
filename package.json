@@ -19,7 +19,7 @@
     "gulp": "^4.0.2",
     "gulp-concat": "^2.6.1",
     "natives": "^1.1.6",
-    "nodemailer": "^4.6.4",
+    "nodemailer": "^6.4.16",
     "path": "^0.12.7",
     "request-ip": "^2.1.3"
   }
